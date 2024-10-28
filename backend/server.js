@@ -4,6 +4,7 @@ const cors = require('cors');
 const multer = require('multer');
 const bodyParser = require('body-parser');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 const PORT = 8000;
@@ -24,14 +25,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage }).array('files', 10); // Up to 10 files
 
-// Configure Nodemailer for sending emails
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'ushakiranbuddi512@gmail.com', // Replace with your business email
-    pass: 'hnaw qzcu ytdn xtov', // Replace with your email password or app password
-  },
-});
+
 
 // API route to handle form submission
 app.post('/send-email', (req, res) => {
@@ -49,13 +43,25 @@ app.post('/send-email', (req, res) => {
       path: file.path,
     }));
 
+    // Configure Nodemailer for sending emails
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+        port: process.env.SMTP_PORT,
+        secure: process.env.SMTP_SECURE === 'true',
+  auth: {
+    user: process.env.EMAIL_USER, // Replace with your business email
+    pass: process.env.EMAIL_PASS, // Replace with your email password or app password
+  },
+});
+
     const mailOptions = {
-      from: email,
-      to: 'ushakiranbuddi@outlook.com', // Replace with the business email to receive the quote
+      from: process.env.EMAIL_USER,
+      to: process.env.BUSINESS_EMAIL, // Replace with the business email to receive the quote
       replyTo: email,
       subject: `New Quote Request from ${name}`,
       text: 
-      `Name:${name} 
+    `Name:${name} 
       Gmail: ${email}
       Phone: ${phone}
       Job Address: ${jobAddress}
