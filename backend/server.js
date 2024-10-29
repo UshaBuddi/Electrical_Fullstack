@@ -26,7 +26,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage }).array('files', 10); // Up to 10 files
 
 
-
 // API route to handle form submission
 app.post('/send-email', (req, res) => {
   upload(req, res, (err) => {
