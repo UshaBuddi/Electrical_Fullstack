@@ -29,7 +29,7 @@ const MyNavbar = () => {
     }, [location.pathname]); // Trigger when pathname changes
 
     const handleClick = (tab) => {
-        console.log(tab, 'tab')
+        // console.log(tab, 'tab')
         setActiveTab(tab);
     };
 
@@ -66,7 +66,7 @@ const MyNavbar = () => {
                         <Nav.Link as={Link} to="/contact" className={`nav-item ${activeTab === 'contact' ? 'active' : ''}`} onClick={() => handleClick('contact')}>
                             Contact
                         </Nav.Link>
-                        {console.log(activeTab, 'tabbbb')},
+                        {/* {console.log(activeTab, 'tabbbb')}, */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

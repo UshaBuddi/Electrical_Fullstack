@@ -35,7 +35,6 @@ const RequestQuote = () => {
         let error = '';
 
         uploadedFiles.forEach(file => {
-            console.log(file, 'file')
             if (file.size > maxFileSize) {
                 error = `File ${file.name} exceeds the maximum size of 2MB.`;
             } else {
@@ -169,7 +168,7 @@ const RequestQuote = () => {
                         {errorMessage && <div className="error-message">{errorMessage}</div>} {/* Display error message */}
                     </div>
 
-                    {console.log(errorMessage, 'errorMessage')}
+                    {/* {console.log(errorMessage, 'errorMessage')} */}
 
                     {/* {loading ? <p>Sending request...</p> : */}
                     <button type="submit" className='submit-button' disabled={errorMessage !== '' || loading}>

@@ -36,7 +36,7 @@ const ContactPage = () => {
         let error = '';
 
         uploadedFiles.forEach(file => {
-            console.log(file, 'file')
+            // console.log(file, 'file')
             if (file.size > maxFileSize) {
                 error = `File ${file.name} exceeds the maximum size of 2MB.`;
             } else {
