@@ -62,7 +62,6 @@ const RequestQuote = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const backendUrl = process.env.REACT_APP_BACKEND_URL;
-        console.log(backendUrl, 'backendUrl')
         setLoading(true); // Show loading spinner
         // setMessage(''); // Clear previous messages
         setFormData({
@@ -129,11 +128,11 @@ const RequestQuote = () => {
                         <input type="email" id="email" name="email" value={formData.email} autoComplete="off" onChange={handleInputChange} required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="jobAddress">Job Address</label>
+                        <label htmlFor="jobAddress">Address</label>
                         <input type="jobAddress" id="jobAddress" name="jobAddress" value={formData.jobAddress} autoComplete="off" onChange={handleInputChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="jobDescription">Job Description</label>
+                        <label htmlFor="jobDescription">Description</label>
                         <textarea id="jobDescription" name="jobDescription" value={formData.jobDescription} autoComplete="off" onChange={handleInputChange} ></textarea>
                     </div>
                     {/* <div className="form-group">

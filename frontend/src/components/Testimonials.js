@@ -92,9 +92,9 @@ const Testimonials = () => {
                         </div>
                     ))}
             </div>
-            <a className="google-review-link" href="https://www.google.co.nz/search?q=exotic+electricals&source=hp&ei=470uYo7CB8eB1e8P6oeC2Ag&iflsig=AHkkrS4AAAAAYi7L87FRybNvRdX4LM9PvF_GJb67vAcH&ved=0ahUKEwjOv8vH28T2AhXHQPUHHeqDAIsQ4dUDCAk&uact=5&oq=exotic+electricals&gs_lcp=Cgdnd3Mtd2l6EAMyCwguEIAEEMcBEK8BMgYIABAWEB46CwguEMcBEK8BEJECOggIABCABBCxAzoLCC4QgAQQsQMQgwE6CwguELEDEMcBEKMCOg4ILhCABBCxAxDHARCjAjoLCC4QsQMQgwEQ1AI6BQgAEJECOgQIABBDOgcIABCxAxBDOggILhCABBDUAjoOCC4QgAQQsQMQxwEQ0QM6CggAELEDEIMBEEM6BQgAEIAEOgoILhDHARCvARBDOgoILhDHARCjAhBDOgsIABCABBCxAxCDAToLCC4QgAQQxwEQ0QM6DggAEI8BEOoCEIwDEOUCOg4ILhCPARDqAhCMAxDlAjoRCC4QjwEQ1AIQ6gIQjAMQ5QI6CAgAELEDEIMBOgsILhCABBCxAxDUAjoLCC4QsQMQxwEQ0QM6BAguEEM6CgguEMcBENEDEEM6CAgAEIAEEMkDUABYqzFgtjZoBnAAeACAAesBiAGOI5IBBjAuOC4xNJgBAKABAbABCg&sclient=gws-wiz" target="_blank" rel="noopener noreferrer">
+            {/* <a className="google-review-link" href="https://www.google.co.nz/search?q=exotic+electricals&source=hp&ei=470uYo7CB8eB1e8P6oeC2Ag&iflsig=AHkkrS4AAAAAYi7L87FRybNvRdX4LM9PvF_GJb67vAcH&ved=0ahUKEwjOv8vH28T2AhXHQPUHHeqDAIsQ4dUDCAk&uact=5&oq=exotic+electricals&gs_lcp=Cgdnd3Mtd2l6EAMyCwguEIAEEMcBEK8BMgYIABAWEB46CwguEMcBEK8BEJECOggIABCABBCxAzoLCC4QgAQQsQMQgwE6CwguELEDEMcBEKMCOg4ILhCABBCxAxDHARCjAjoLCC4QsQMQgwEQ1AI6BQgAEJECOgQIABBDOgcIABCxAxBDOggILhCABBDUAjoOCC4QgAQQsQMQxwEQ0QM6CggAELEDEIMBEEM6BQgAEIAEOgoILhDHARCvARBDOgoILhDHARCjAhBDOgsIABCABBCxAxCDAToLCC4QgAQQxwEQ0QM6DggAEI8BEOoCEIwDEOUCOg4ILhCPARDqAhCMAxDlAjoRCC4QjwEQ1AIQ6gIQjAMQ5QI6CAgAELEDEIMBOgsILhCABBCxAxDUAjoLCC4QsQMQxwEQ0QM6BAguEEM6CgguEMcBENEDEEM6CAgAEIAEEMkDUABYqzFgtjZoBnAAeACAAesBiAGOI5IBBjAuOC4xNJgBAKABAbABCg&sclient=gws-wiz" target="_blank" rel="noopener noreferrer">
                 Read our reviews on Google
-            </a>
+            </a> */}
         </div>
     );
 };

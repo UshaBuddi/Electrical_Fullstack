@@ -780,7 +780,7 @@ textarea {
 }
 
 /* Image Gallery Section */
-.gallery-container {
+/* .gallery-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -790,6 +790,40 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   padding: 24px 24px 24px 24px;
   margin: 0 auto;
+} */
+
+.gallery-container {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+/* Default for larger screens (desktops/laptops) */
+.gallery-container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .gallery-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 768px) {
+  .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra small screens (small phones) */
+@media (max-width: 480px) {
+  .gallery-container {
+      grid-template-columns: 1fr;
+  }
 }
 
 .gallery-item img {
@@ -1212,6 +1246,7 @@ body {
   /* Subtle shadow for effect */
   z-index: 1000;
   padding: 10px 0;
+  background-color: #ffd700 !important;
 }
 
 .navbar-logo img {

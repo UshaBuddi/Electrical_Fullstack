@@ -29,7 +29,6 @@ const MyNavbar = () => {
     }, [location.pathname]); // Trigger when pathname changes
 
     const handleClick = (tab) => {
-        // console.log(tab, 'tab')
         setActiveTab(tab);
     };
 
@@ -42,8 +41,8 @@ const MyNavbar = () => {
                 <Navbar.Brand as={Link} to="/" className="navbar-logo">
                     <img
                         src="/logo.png"  // Replace with your logo path
-                        width="150"
-                        height="50"
+                        width="60"
+                        height="100"
                         className="d-inline-block align-top"
                         alt="Logo"
                     />

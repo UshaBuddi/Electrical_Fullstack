@@ -64,6 +64,7 @@ const ContactPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true); // Show loading spinner
+        const backendUrl = process.env.REACT_APP_BACKEND_URL;
         // setMessage(''); // Clear previous messages
         setFormData({
             name: '',
@@ -88,7 +89,7 @@ const ContactPage = () => {
 
         try {
             // const response = 
-            await axios.post('http://localhost:8000/send-email', data, {
+            await axios.post(`${backendUrl}/send-email`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -141,11 +142,11 @@ const ContactPage = () => {
                             <input type="email" id="email" name="email" value={formData.email} autoComplete="off" onChange={handleInputChange} required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="jobAddress">Job Address</label>
+                            <label htmlFor="jobAddress">Address</label>
                             <input type="jobAddress" id="jobAddress" name="jobAddress" value={formData.jobAddress} autoComplete="off" onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="jobDescription">Job Description</label>
+                            <label htmlFor="jobDescription">Description</label>
                             <textarea id="jobDescription" name="jobDescription" value={formData.jobDescription} autoComplete="off" onChange={handleInputChange} ></textarea>
                         </div>
                         {/* <div className="form-group">
