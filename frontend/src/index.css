@@ -116,6 +116,7 @@ footer a {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .terms-conditions-container h1,
@@ -168,6 +169,7 @@ footer a {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .privacy-policy-container h1,
@@ -175,6 +177,7 @@ footer a {
   font-family: 'Arial', sans-serif;
   color: #333;
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 .privacy-policy-container p {
@@ -182,34 +185,41 @@ footer a {
   line-height: 1.6;
   color: #555;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .privacy-policy-container ul {
   list-style-type: disc;
   margin-left: 40px;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .privacy-policy-container ul li {
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 /* Responsive design for mobile devices */
 @media (max-width: 768px) {
   .privacy-policy-container {
     padding: 15px;
+    text-align: justify;
   }
 
   .privacy-policy-container h1 {
     font-size: 24px;
+    text-align: justify;
   }
 
   .privacy-policy-container h2 {
     font-size: 20px;
+    text-align: justify;
   }
 
   .privacy-policy-container p {
     font-size: 14px;
+    text-align: justify;
   }
 }
 
@@ -221,6 +231,7 @@ footer a {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .returns-policy-container h1,
