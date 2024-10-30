@@ -61,7 +61,8 @@ const RequestQuote = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        const backendUrl = process.env.REACT_APP_BACKEND_URL;
+        console.log(backendUrl, 'backendUrl')
         setLoading(true); // Show loading spinner
         // setMessage(''); // Clear previous messages
         setFormData({
@@ -87,7 +88,7 @@ const RequestQuote = () => {
 
         try {
             // const response = 
-            await axios.post('http://localhost:8000/send-email', data, {
+            await axios.post(`${backendUrl}/send-email`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
