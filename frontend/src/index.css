@@ -819,21 +819,21 @@ textarea {
 /* Tablets */
 @media (max-width: 1024px) {
   .gallery-container {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Mobile (small screens) */
 @media (max-width: 768px) {
   .gallery-container {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Extra small screens (small phones) */
 @media (max-width: 480px) {
   .gallery-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1257,7 +1257,7 @@ body {
   /* Subtle shadow for effect */
   z-index: 1000;
   padding: 10px 0;
-  background-color: #ffd700 !important;
+  background-color: #2691bb !important;
 }
 
 .navbar-logo img {
@@ -1283,12 +1283,12 @@ body {
 }
 
 .nav-item:hover {
-  color: #007bff;
-  /* Bootstrap primary color */
+  color: black
+    /* Bootstrap primary color */
 }
 
 .nav-item.active {
-  color: red !important;
+  color: white !important;
   /* Red color for the active tab */
 }
 

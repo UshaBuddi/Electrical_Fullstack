@@ -1,6 +1,4 @@
 import React from 'react';
-// import './PortfolioSection.css';  // Import the CSS for this section
-// import { FaSearchPlus } from 'react-icons/fa';  // Icon for hover
 
 const PortfolioSection = () => {
     const clients = [
@@ -20,9 +18,6 @@ const PortfolioSection = () => {
                     <div className="portfolio-item" key={client.id}>
                         <div className="portfolio-image-container">
                             <img src={client.image} alt={client.category} />
-                            {/* <div className="hover-overlay">
-                <FaSearchPlus className="hover-icon" />
-              </div> */}
                             <div className="portfolio-category">
                                 {client.category}
                             </div>

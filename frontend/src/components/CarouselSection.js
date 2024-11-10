@@ -13,10 +13,6 @@ const CarouselSection = () => {
                             alt="First slide"
                         />
                     </div>
-                    {/* <Carousel.Caption>
-            <h3>First Slide Title</h3>
-            <p>First Slide Description goes here.</p>
-          </Carousel.Caption> */}
                 </Carousel.Item>
 
                 <Carousel.Item>
@@ -27,10 +23,6 @@ const CarouselSection = () => {
                             alt="Second slide"
                         />
                     </div>
-                    {/* <Carousel.Caption>
-            <h3>Second Slide Title</h3>
-            <p>Second Slide Description goes here.</p>
-          </Carousel.Caption> */}
                 </Carousel.Item>
 
                 <Carousel.Item>
@@ -41,10 +33,6 @@ const CarouselSection = () => {
                             alt="Third slide"
                         />
                     </div>
-                    {/* <Carousel.Caption>
-            <h3>Third Slide Title</h3>
-            <p>Third Slide Description goes here.</p>
-          </Carousel.Caption> */}
                 </Carousel.Item>
             </Carousel>
         </div>

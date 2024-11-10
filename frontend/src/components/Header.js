@@ -65,7 +65,6 @@ const MyNavbar = () => {
                         <Nav.Link as={Link} to="/contact" className={`nav-item ${activeTab === 'contact' ? 'active' : ''}`} onClick={() => handleClick('contact')}>
                             Contact
                         </Nav.Link>
-                        {/* {console.log(activeTab, 'tabbbb')}, */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

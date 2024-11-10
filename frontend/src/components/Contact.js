@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
 import { FaTimes } from 'react-icons/fa';
-// import './ContactPage.css';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ const ContactPage = () => {
         phone: '',
         jobAddress: '',
         jobDescription: '',
-        // files: [],
     });
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -20,7 +18,6 @@ const ContactPage = () => {
     const [loading, setLoading] = useState(false);
     const fileInputRef = useRef(null);
     const maxFileSize = 2 * 1024 * 1024;
-    //   const [message, setMessage] = useState('');
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -36,7 +33,6 @@ const ContactPage = () => {
         let error = '';
 
         uploadedFiles.forEach(file => {
-            // console.log(file, 'file')
             if (file.size > maxFileSize) {
                 error = `File ${file.name} exceeds the maximum size of 2MB.`;
             } else {
@@ -51,8 +47,6 @@ const ContactPage = () => {
             setFiles([...files, ...validFiles]);
             setFileList([...fileList, ...validFiles.map((file) => file.name)]);
         }
-        // setFiles([...files, ...uploadedFiles]);
-        // setFileList([...fileList, ...uploadedFiles.map((file) => file.name)]);
         fileInputRef.current.value = "";
     };
 
@@ -65,7 +59,6 @@ const ContactPage = () => {
         e.preventDefault();
         setLoading(true); // Show loading spinner
         const backendUrl = process.env.REACT_APP_BACKEND_URL;
-        // setMessage(''); // Clear previous messages
         setFormData({
             name: '',
             email: '',
@@ -88,7 +81,6 @@ const ContactPage = () => {
         }
 
         try {
-            // const response = 
             await axios.post(`${backendUrl}/send-email`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -96,7 +88,6 @@ const ContactPage = () => {
             });
         } catch (error) {
             console.error('Error submitting the quote request:', error);
-            //   setMessage('Error submitting the form. Please try again.');
             setLoading(false); // Hide loading spinner
         } finally {
             setLoading(false); // Hide loading indicator
@@ -125,20 +116,18 @@ const ContactPage = () => {
                 {/* Quote Submission Form */}
                 <div className="quote-form">
                     <h2>Request a Quote</h2>
-                    {/* {isSubmitted ? (
-                        <p className="success-message">Thank you! Your request has been submitted.</p>
-                    ) : ( */}
                     <form className="form-section" onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name *</label>
                             <input type="text" id="name" name="name" value={formData.name} autoComplete="off" onChange={handleInputChange} required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" value={formData.phone} autoComplete="off" onChange={handleInputChange} required />
+                            <label htmlFor="phone">Phone Number *</label>
+                            <input type="tel" pattern="[0-9]{6}"
+                                maxLength="10" id="phone" name="phoneß" value={formData.phone} autoComplete="off" onChange={handleInputChange} required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email *</label>
                             <input type="email" id="email" name="email" value={formData.email} autoComplete="off" onChange={handleInputChange} required />
                         </div>
                         <div className="form-group">
@@ -149,10 +138,6 @@ const ContactPage = () => {
                             <label htmlFor="jobDescription">Description</label>
                             <textarea id="jobDescription" name="jobDescription" value={formData.jobDescription} autoComplete="off" onChange={handleInputChange} ></textarea>
                         </div>
-                        {/* <div className="form-group">
-              <label htmlFor="files">Attachments (optional)</label>
-              <input type="file" id="files" name="files" multiple onChange={handleFileChange} />
-            </div> */}
 
                         <div className="form-group">
                             <label>Upload Files:</label>
@@ -163,7 +148,6 @@ const ContactPage = () => {
                                 multiple
                                 onChange={handleFileChange}
                                 autoComplete="off"
-                            // required
                             />
                         </div>
 
@@ -188,7 +172,6 @@ const ContactPage = () => {
                             {loading ? 'Sending request...' : 'Submit'}
                         </button>
                     </form>
-                    {/* )} */}
                 </div>
             </div>
             <Footer />

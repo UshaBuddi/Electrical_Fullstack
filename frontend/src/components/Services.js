@@ -2,7 +2,6 @@ import React from 'react';
 import Footer from './Footer';
 import Testimonials from './Testimonials';
 import RequestQuote from './RequestQuote';
-// import './Services.css';
 
 const Services = () => {
   const electricalServices = [
