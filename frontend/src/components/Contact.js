@@ -108,8 +108,8 @@ const ContactPage = () => {
                 <div className="contact-details">
                     <h2>Contact Information</h2>
                     <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-                    <p><strong>Email:</strong> contact@exoticelectrical.com</p>
-                    <p><strong>Address:</strong> 1234 Electric Ave, Auckland, NZ</p>
+                    <p><strong>Email:</strong> electrical.business@outlook.com</p>
+                    <p><strong>Address:</strong> 12345 Electric Ave, Auckland, NZ</p>
                     <p><strong>Business Hours:</strong> Mon-Fri: 9am - 5pm</p>
                 </div>
 
