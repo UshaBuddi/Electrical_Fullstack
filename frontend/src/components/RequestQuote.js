@@ -105,8 +105,10 @@ const RequestQuote = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="phone">Phone Number *</label>
-                        <input type="tel" pattern="[0-9]"
-                            maxLength="10" id="phone" name="phone" value={formData.phone} autoComplete="off" onChange={handleInputChange} required />
+                        <input type="tel" 
+                        // pattern="[0-9]"
+                        //     maxLength="10" 
+                            id="phone" name="phone" value={formData.phone} autoComplete="off" onChange={handleInputChange} required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email *</label>
