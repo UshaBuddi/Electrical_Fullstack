@@ -44,8 +44,8 @@ app.post('/send-email', (req, res) => {
 
     // Configure Nodemailer for sending emails
 const transporter = nodemailer.createTransport({
-  service: 'hotmail',
-  host: 'smtp.office365.com',
+  service: 'gmail',
+  host: 'smtp.gmail.com',
         port: process.env.SMTP_PORT,
         secure: process.env.SMTP_SECURE === 'true',
   auth: {
@@ -60,7 +60,7 @@ const transporter = nodemailer.createTransport({
       replyTo: email,
       subject: `New Quote Request from ${name}`,
       text: 
-      `Name:${name} 
+    `Name:${name} 
       Gmail: ${email}
       Phone: ${phone}
       Job Address: ${jobAddress}
