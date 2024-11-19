@@ -81,6 +81,7 @@ const RequestQuote = () => {
 
         try {
             await axios.post(`${backendUrl}/send-email`, data, {
+                // await axios.post('http://localhost:8000/send-email', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -104,7 +105,7 @@ const RequestQuote = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="phone">Phone Number *</label>
-                        <input type="tel" pattern="[0-9]{6}"
+                        <input type="tel" pattern="[0-9]"
                             maxLength="10" id="phone" name="phone" value={formData.phone} autoComplete="off" onChange={handleInputChange} required />
                     </div>
                     <div className="form-group">
